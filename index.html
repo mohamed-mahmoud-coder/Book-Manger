@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Save It</title>
+    <link href="index.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link alt="Book mark logo" rel="icon" type="image/svg+xml" href="bookmark.svg" />
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <button id="close-toggle" type="button">
+            <img id="closeS" src="panel-left.svg" alt="close Sidebar" />
+        </button>
+        <!-- Brand / Logo -->
+        <div class="brand-container">
+            <button id="brand-toggle" type="button">
+                <img id="bIcon" src="bookmark.svg" alt="Toggle Sidebar" />
+            </button>
+
+            <div class="b-text">
+                <h1>Save It</h1>
+                <p>Save. Organize. Access.</p>
+            </div>
+        </div>
+
+        <!-- Sidebar Navigation -->
+        <ul class="nav-list">
+            <li>
+                <button class="nav-item" type="button">
+                    <img src="house.svg" />
+                    <span>All Bookmarks</span>
+                </button>
+            </li>
+
+            <li>
+                <button class="nav-item" type="button">
+                    <img src="star.svg" />
+                    <span>Favorites</span>
+                </button>
+            </li>
+
+            <li>
+                <button class="nav-item" type="button">
+                    <img src="briefcase-business.svg" />
+                    <span>Work</span>
+                </button>
+            </li>
+
+            <li>
+                <button class="nav-item" type="button">
+                    <img src="library.svg" />
+                    <span>Learning</span>
+                </button>
+            </li>
+
+            <li>
+                <button class="nav-item" type="button">
+                    <img src="clapperboard.svg" />
+                    <span>Entertainment</span>
+                </button>
+            </li>
+
+            <li>
+                <button class="nav-item" type="button">
+                    <img src="trash.svg" />
+                    <span>Trash</span>
+                </button>
+            </li>
+        </ul>
+
+        <!-- Sidebar Information Card -->
+        <div class="sidebar-card">
+            <i class="fa-solid fa-scroll"></i>
+            <h4>Your Digital Space</h4>
+
+            <p>
+                All your favorite links, neatly organized and always within reach.
+            </p>
+        </div>
+
+        <!-- Settings -->
+        <div id="settings">
+            <a href="https://github.com/mohamed-mahmoud-coder" style="color: inherit" target="_blank">
+                <i class="fa-solid fa-cog fa-spin fa-spin-reverse"></i>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-home">
+        <!-- Header -->
+        <header class="header-class">
+            <div class="search-container">
+                <img id="sIcon" src="search.svg" alt="Search logo" />
+
+                <input id="search" type="search" placeholder="Search bookmarks... (e.g. Linkedin, Github)" />
+
+                <button id="dark-light" type="button">🔆</button>
+            </div>
+        </header>
+
+        <!-- Main Header -->
+        <div class="main-header">
+            <h2>
+                My Bookmarks
+                <p>Manage and organize your saved links.</p>
+            </h2>
+
+            <button type="button" id="add-btn">+ Add Bookmark</button>
+        </div>
+
+        <!-- Category Filters -->
+        <ul class="main-list">
+            <li>
+                <button class="main-item" type="button">
+                    <img src="layout-grid.svg" />
+                    <span>All Bookmarks</span>
+                </button>
+            </li>
+
+            <li>
+                <button class="main-item" type="button">
+                    <img src="star.svg" />
+                    <span>Favorites</span>
+                </button>
+            </li>
+
+            <li>
+                <button class="main-item" type="button">
+                    <img src="briefcase-business.svg" />
+                    <span>Work</span>
+                </button>
+            </li>
+
+            <li>
+                <button class="main-item" type="button">
+                    <img src="library.svg" />
+                    <span>Learning</span>
+                </button>
+            </li>
+
+            <li>
+                <button class="main-item" type="button">
+                    <img src="clapperboard.svg" />
+                    <span>Entertainment</span>
+                </button>
+            </li>
+        </ul>
+
+        <!-- Bookmarks -->
+        <div class="bookmarks-container">
+            <!-- Bookmark cards will appear here -->
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="Quick-Stats">
+            <img src="chart-no-axes-combined.svg" />
+            <h4>Quick Stats</h4>
+
+            <span class="Stats-total">12</span>
+            <span class="Stats-favorites">5</span>
+            <span class="progres-bar">---</span>
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
