@@ -92,7 +92,9 @@
     </aside>
 
     <!-- Main Content -->
+
     <main class="main-home">
+
         <!-- Header -->
         <header class="header-class">
             <div class="search-container">
@@ -100,19 +102,23 @@
 
                 <input id="search" type="search" placeholder="Search bookmarks... (e.g. Linkedin, Github)" />
 
-                <button id="dark-light" type="button">🔆</button>
+             
             </div>
+               <button id="dark-light" type="button">🔆</button>
         </header>
 
         <!-- Main Header -->
         <div class="main-header">
-            <h2>
-                My Bookmarks
-                <p>Manage and organize your saved links.</p>
-            </h2>
+           <div class="header-text">
+        <h2>Your <span>Bookmarks</span></h2>
+        <p>Manage and organize your saved links.</p>
+    </div>
 
-            <button type="button" id="add-btn">+ Add Bookmark</button>
+                <img src="bookmark-illustration.png" alt="Bookmark illustration">
+           
+
         </div>
+        
 
         <!-- Category Filters -->
         <ul class="main-list">
@@ -150,7 +156,13 @@
                     <span>Entertainment</span>
                 </button>
             </li>
+
+                 <li>
+                     <button  type="button" id="add-btn"><span>+</span> Add Bookmark</button>
+                 </li>      
+
         </ul>
+        
 
         <!-- Bookmarks -->
         <div class="bookmarks-container">
