@@ -34,7 +34,51 @@ body {
 }
 .sidebar.collapsed {
   width: 80px;
+     min-width: 80px;
+
 }
+.sidebar.collapsed  .nav-list span {
+display: none;
+justify-content: center;
+
+ padding: 12px 0;
+
+}
+.sidebar.collapsed  .b-text  {
+display: none;
+
+
+}
+.sidebar.collapsed  .sidebar-card  {
+display: none;
+
+
+
+}
+.sidebar.collapsed  #close-toggle {
+display: none;
+justify-content: center;
+
+ padding: 12px 0;
+}
+.sidebar.collapsed  #settings  {
+justify-content: center;
+align-items: center;
+
+
+
+}
+.sidebar.collapsed  .brand-container  {
+justify-content: center;
+align-items: center;
+
+ padding: 12px 0;
+
+}
+.sidebar {
+    transition: width 0.3s ease;
+}
+
 .brand-container {
   display: flex;
   flex-direction: row;
@@ -111,17 +155,19 @@ body {
   cursor: pointer;
   transform: background-color;
   transition:
-    background-color 0.2s ease,
-    color 0.25s ease;
+     background-color 0.25s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 .nav-item:hover {
-  background-color: #263b79;
-
-  transform: translateX(4px);
+   background-color: #263b79;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-.nav-item.active {
+.nav-item:active {
   background-color: #263b79;
   color: #ffffff;
+   transform: scale(0.94);
 }
 
 .sidebar-card {
@@ -221,8 +267,8 @@ body {
   font-size: 24px;
   cursor: pointer;
   transition:
-    background-color 0.3s ease,
-    transform 0.3s ease;
+    background-color 0.5s ease,
+    transform 0.5s ease;
 }
 #dark-light:hover {
   background-color: #dce2ed55;
@@ -236,6 +282,7 @@ color: #aab4cc;
 body.dark #dark-light {
   background-color: #1e293b;
   color: #facc15;
+  
 }
 
 body.dark #dark-light:hover {
@@ -485,6 +532,43 @@ body.dark .main-item {
   margin-left: auto;
   object-fit: contain;
 }
+/* Brand button */
+#brand-toggle {
+    position: relative;
+    cursor: pointer;
+}
+
+/* Tooltip */
+.sidebar.collapsed #brand-toggle::after {
+    content: "Open Sidebar";
+    position: absolute;
+    left: calc(100% + 15px);
+    top: 50%;
+    transform: translateY(-50%) translateX(-5px);
+
+    background: #263453;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+
+    font-size: 12px;
+    white-space: nowrap;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.sidebar.collapsed #brand-toggle:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) translateX(0);
+}
+.sidebar.collapsed .nav-item:hover {
+    transform: scale(1.08);
+}
 
 
 
@@ -557,6 +641,7 @@ body.dark .main-item {
         width: auto;
         padding: 9px 10px;
         font-size: 13px;
+        
     }
 
     .sidebar-card {
@@ -614,3 +699,6 @@ body.dark .main-item {
         width: 90px;
     }
 }
+
+
+
